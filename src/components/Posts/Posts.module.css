@@ -1,0 +1,52 @@
+/* ----loader------ */
+.loader {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  position: relative;
+}
+.loader::after,
+.loader::before {
+  content: "";
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #000000;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: animloader 2s linear infinite;
+}
+.loader::after {
+  animation-delay: 1s;
+}
+
+@keyframes animloader {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+/* ----/loader------ */
+.title {
+  margin-bottom: 10px;
+}
+h3{
+  font-style: italic;
+}
+h3+p{
+  font-style: italic;
+}
+.posts_and_details {
+  display: flex;
+  gap: 20px;
+}
+.posts_list {
+  max-width: 45%;
+  width: 100%;
+}
