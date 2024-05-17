@@ -15,7 +15,6 @@ export const TodoItem = ({ todo }) => {
           onChange={() => dispatch(toggleTodo(todo.id))}
           checked={todo.completed}
           type="checkbox"
-          defaultChecked
           className="checkbox checkbox-secondary"
         />
       </label>
