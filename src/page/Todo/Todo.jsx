@@ -5,6 +5,7 @@ import { selectTodos } from "../../redux/todoList/selectors";
 import { TodoList } from "../../components/TodoList/TodoList";
 import { Field, Form, Formik } from "formik";
 import { addTodo } from "../../redux/todoList/actions";
+import { Filter } from "../../components/Filter/Filter";
 
 export const Todo = () => {
   const todos = useSelector(selectTodos);
@@ -36,6 +37,7 @@ export const Todo = () => {
           </button>
         </Form>
       </Formik>
+      <Filter/>
       <TodoList todos={todos} />
     </div>
   );
