@@ -1,4 +1,4 @@
-import { DECREMENT, INCREMENT, RESET, STEP } from "./constans"
+import { DECREMENT, INCREMENT, RESET, STEP } from "./constants"
 
 const initialState = {
     count: 0,

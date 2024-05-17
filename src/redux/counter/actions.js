@@ -1,4 +1,4 @@
-import { DECREMENT, INCREMENT, RESET, STEP } from "./constans"
+import { DECREMENT, INCREMENT, RESET, STEP } from "./constants"
 
 export const increment = () => ({ type: INCREMENT })
 export const decrement = () => ({ type: DECREMENT })

@@ -1,0 +1,5 @@
+.wrapper{
+    display: flex;
+    gap: 20px;
+    font-size: 26px;
+}
