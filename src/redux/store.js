@@ -1,7 +1,7 @@
-import { filterReducer } from "./filter/reducers";
 import { configureStore } from "@reduxjs/toolkit";
 import { countReducer } from "./counter/slice";
 import { todoReducer } from "./todoList/slice";
+import { filterReducer } from "./filter/slice";
 
 
 export const store = configureStore({
