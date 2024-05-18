@@ -1,7 +1,8 @@
 import { useDispatch } from "react-redux";
 import s from "./TodoItem.module.css";
-import { deleteTodo, likeTodo, toggleTodo } from "../../redux/todoList/actions";
+
 import { FaRegStar } from "react-icons/fa";
+import { deleteTodo, likeTodo, toggleTodo } from "../../redux/todoList/slice";
 
 export const TodoItem = ({ todo }) => {
   const dispatch = useDispatch();

@@ -1,11 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 
 import s from "./Todo.module.css";
-import { selectTodos } from "../../redux/todoList/selectors";
 import { TodoList } from "../../components/TodoList/TodoList";
 import { Field, Form, Formik } from "formik";
-import { addTodo } from "../../redux/todoList/actions";
 import { Filter } from "../../components/Filter/Filter";
+import { addTodo, selectTodos } from "../../redux/todoList/slice";
 
 export const Todo = () => {
   const todos = useSelector(selectTodos);
