@@ -1,5 +1,5 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit"
-
+// Створюємо початковий стан
 const initialState = {
     todos: [
         {
@@ -24,13 +24,20 @@ const initialState = {
     ],
 
 }
-
+// Створюємо слайс
 const slice = createSlice({
+    // Даємо ім'я (має спіівпадати з назвою в сторі )
     name: 'todolist',
+
+    // Передаємо початковий стан
+    initialState,
+
+    // Створюємо селектори прямо в слайсі
     selectors: {
         selectTodos: state => state.todos,
     },
-    initialState,
+
+    // Створюємо редюсери(екшени)
     reducers: {
         deleteTodo: (state, action) => {
             state.todos = state.todos.filter(todo => todo.id !== action.payload)
@@ -47,6 +54,9 @@ const slice = createSlice({
                 item.liked = !item.liked
             }
         },
+        // Підготовка пейлоада відбувається таким чином
+        // Спочатку викликається prepare
+        // ПОтім викликається reducer
         addTodo: {
             prepare: todo => {
                 return {
@@ -64,7 +74,9 @@ const slice = createSlice({
         }
     }
 })
-
+// Експорт редюсера (його стан, логіка)
 export const todoReducer = slice.reducer
+// Експорт екшенів - того, що написано в реюсерах
 export const { deleteTodo, toggleTodo, likeTodo, addTodo } = slice.actions;
+// Експорт селекторів
 export const { selectTodos } = slice.selectors
